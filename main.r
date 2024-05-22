@@ -127,9 +127,9 @@ punif(x, A, B)
 # Muchas variables aleatorias pueden ser representadas por esta distribucion
 # -----------------------------------------------------------------------------#
 # Acumulativa Normal [P(X<362)]
-x <- 362
-μ <- 300
-σ <- 50
+x <- -4.67
+μ <- 0
+σ <- 1
 pnorm(x, μ, σ)
 ### NORMAL ###
 
@@ -148,11 +148,11 @@ pexp(x, λ)
 # Se usa para averiguar el parametro λt en el proceso de Poisson
 # -----------------------------------------------------------------------------#
 # Acumulativa Gamma [P(X<1)]
-x <- 1 # tiempo
-α <- 2 # forma (cuantos eventos se van a dar en el intervalo elegido)
-β <- 1/5 # tiempo medio entre fallas
+x <- 60 # tiempo
+α <- 5 # forma (cuantos eventos se van a dar en el intervalo elegido)
+β <- 10 # tiempo medio entre fallas
 # exact
-pgamma(x, α, β)
+pgamma(x, shape=α, scale=β)
 ### GAMMA ###
 
 ### CHICUADRADA ###
@@ -180,8 +180,8 @@ pbeta(x, α, β)
 # Se usa para averiguar el parametro λt en el proceso de Poisson
 # -----------------------------------------------------------------------------#
 # Acumulativa Lognormal [P(X<8)]
-x <- 8
-μ <- 3.2
+x <- -1.12
+μ <- 0
 σ <- 1
 # exact
 dlnorm(x, μ, σ)
@@ -191,9 +191,9 @@ dlnorm(x, μ, σ)
 # Se usa para averiguar el parametro λt en el proceso de Poisson
 # -----------------------------------------------------------------------------#
 # Acumulativa Weibull [P(X<8)]
-x <- 0.2
-α <- 3.2
-β <- 1
+x <- 8
+α <- 0.01
+β <- 2
 # exact
 pweibull(x, α, β)
 ### WEIBULL ###
