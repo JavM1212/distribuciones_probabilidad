@@ -6,10 +6,10 @@
 # una probabilidad de p
 # -----------------------------------------------------------------------------#
 # Distribucion Binomial [P(X=2)]
-x <- 2 # exitos
+x <- 1 # exitos
 n <- 5 # intentos
-p <- 0.5 # probabilidad de exito
-dbinom(x, n, p)
+p <- 0.2 # probabilidad de exito
+pbinom(x, n, p)
 
 # Acumulativa Binomial [P(X<=2)]
 r <- 2 # x = 0, 1, 2, ..., r
@@ -87,8 +87,9 @@ pgeom(x, p)
 # tiempo λt
 # -----------------------------------------------------------------------------#
 # Distribucion Poisson [P(X=6)]
-x <- 6 # numero de eventos
-λt <- 4 # intervalo de tiempo λt
+x <- 4 # numero de eventos
+λt <- 2 # intervalo de tiempo λt
+"poisson"
 ppois(x, λt)
 
 # Acumulativa Poisson [P(X<=15)]
@@ -127,9 +128,10 @@ punif(x, A, B)
 # Muchas variables aleatorias pueden ser representadas por esta distribucion
 # -----------------------------------------------------------------------------#
 # Acumulativa Normal [P(X<362)]
-x <- -4.67
+x <- 1
 μ <- 0
 σ <- 1
+"normal"
 pnorm(x, μ, σ)
 ### NORMAL ###
 
@@ -137,10 +139,9 @@ pnorm(x, μ, σ)
 # Se usa para averiguar el parametro λt en el proceso de Poisson
 # -----------------------------------------------------------------------------#
 # Acumulativa Exponential [P(X<8)]
-x <- 8 # tiempo
-β <- 5 # tiempo medio entre fallas
+x <- 6 # tiempo
+β <- 8 # tiempo medio entre fallas
 λ <- 1/β # parametro de la exponencial
-# exact
 pexp(x, λ)
 ### EXPONENTIAL ###
 
@@ -148,9 +149,9 @@ pexp(x, λ)
 # Se usa para averiguar el parametro λt en el proceso de Poisson
 # -----------------------------------------------------------------------------#
 # Acumulativa Gamma [P(X<1)]
-x <- 60 # tiempo
-α <- 5 # forma (cuantos eventos se van a dar en el intervalo elegido)
-β <- 10 # tiempo medio entre fallas
+x <- 20 # tiempo
+α <- 2 # forma (cuantos eventos se van a dar en el intervalo elegido)
+β <- 4 # tiempo medio entre fallas
 # exact
 pgamma(x, shape=α, scale=β)
 ### GAMMA ###
